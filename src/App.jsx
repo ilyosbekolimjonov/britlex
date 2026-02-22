@@ -14,7 +14,7 @@ import ContactUs from './components/ContactUs'
 
 function App() {
     return (
-        <div className='max-w-100 my-5 mx-4 m-auto'>
+        <div className='max-w-100 my-5 mx-4 m-auto lp:max-w-7xl lp:m-auto'>
             <Navbar />
             <Hero />
 
