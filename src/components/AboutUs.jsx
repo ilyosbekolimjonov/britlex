@@ -1,9 +1,10 @@
 import aboutImg from "../assets/images/about-us.svg"
+import { aboutData } from "../constants"
 
 const AboutUs = () => {
     return (
-        <div className="flex flex-col items-centerlp:justify-between lp:relative lp:my-15">
-            <h2 className="mt-17 mb-15 text-3xl font-semibold text-center lp:mb-0 lp:text-start lp:text-5xl lp:absolute lp:top-12">About Us</h2>
+        <div id="about" className="flex flex-col items-center lp:justify-between lp:relative lp:my-15">
+            <h2 className="mt-17 mb-15 text-3xl font-semibold text-center lp:mb-0 lp:text-5xl lp:absolute lp:top-12 lp:left-0">About Us</h2>
             <div className="lp:flex lp:justify-between">
                 <img src={aboutImg} alt="About Us" className="w-full lp:order-2 lp:w-[40%]" />
 
@@ -13,18 +14,14 @@ const AboutUs = () => {
                     </p>
 
                     <div className="flex flex-col items-center gap-8 mb-10 lp:flex-row lp:justify-between">
-                        <div className="text-center">
-                            <h3 className="text-4xl font-bold lp:mb-3">800</h3>
-                            <p className="text-[rgba(143,149,165)]">Pupils</p>
-                        </div>
-                        <div className="text-center">
-                            <h3 className="text-4xl font-bold lp:mb-3">18</h3>
-                            <p className="text-[rgba(143,149,165)]">Teachers</p>
-                        </div>
-                        <div className="text-center">
-                            <h3 className="text-4xl font-bold lp:mb-3">6</h3>
-                            <p className="text-[rgba(143,149,165)]">Foreign languages</p>
-                        </div>
+                        {
+                            aboutData.map(({ number, data }) => (
+                                <div className="text-center">
+                                    <h3 className="text-4xl font-bold lp:mb-3">{number}</h3>
+                                    <p className="text-[rgba(143,149,165)]">{data}</p>
+                                </div>
+                            ))
+                        }
                     </div>
                 </div>
             </div>

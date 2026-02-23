@@ -1,4 +1,3 @@
-import './App.css'
 import AboutUs from './components/AboutUs'
 import Hero from './components/Hero'
 import Listening from './components/Skills/Listening'
@@ -7,9 +6,7 @@ import Reading from './components/Skills/Reading'
 import Speaking from './components/Skills/Speaking'
 import Writing from './components/Skills/Writing'
 import Footer from './components/Footer'
-import SelfStudy from './components/Pricing/SelfStudy'
-import LiveClasses from './components/Pricing/LiveClasses'
-import PersonalTuition from './components/Pricing/PersonalTuition'
+import PricingCard from './components/Pricing/PricingCard'
 import ContactUs from './components/ContactUs'
 
 function App() {
@@ -18,8 +15,7 @@ function App() {
             <Navbar />
             <Hero />
 
-            {/* Skills */}
-            <div>
+            <div id='skills'>
                 <h2 className="mt-17 mb-12 text-3xl font-semibold m-auto text-center lp:text-5xl lp:mb-18">Skills</h2>
                 <div className='grid grid-cols-1 gap-5 lp:grid-cols-3'>
                     <Speaking />
@@ -28,15 +24,13 @@ function App() {
                     <Listening />
                 </div>
             </div>
+
             <AboutUs />
 
-            {/* Pricing */}
-            <div>
+            <div id='pricing'>
                 <h2 className="mt-17 mb-10 text-3xl font-bold text-center lp:text-4xl lp:mt-25 lp:mb-15">Pricing</h2>
                 <div className='flex flex-col gap-10 mb-5 lp:flex-row lp:justify-between'>
-                    <SelfStudy />
-                    <LiveClasses />
-                    <PersonalTuition />
+                    <PricingCard />
                 </div>
             </div>
 
@@ -46,4 +40,4 @@ function App() {
     )
 }
 
-export default App
+export default App;
