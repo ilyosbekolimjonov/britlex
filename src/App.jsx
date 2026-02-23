@@ -19,19 +19,25 @@ function App() {
             <Hero />
 
             {/* Skills */}
-            <div className='flex flex-col gap-5'>
-                <Speaking />
-                <Writing />
-                <Reading />
-                <Listening />
+            <div>
+                <h2 className="mt-17 mb-12 text-3xl font-semibold m-auto text-center lp:text-5xl lp:mb-18">Skills</h2>
+                <div className='grid grid-cols-1 gap-5 lp:grid-cols-3'>
+                    <Speaking />
+                    <Writing />
+                    <Reading />
+                    <Listening />
+                </div>
             </div>
             <AboutUs />
 
             {/* Pricing */}
-            <div className='flex flex-col gap-10 mb-5'>
-                <SelfStudy />
-                <LiveClasses />
-                <PersonalTuition />
+            <div>
+                <h2 className="mt-17 mb-10 text-3xl font-bold text-center lp:text-4xl lp:mt-25 lp:mb-15">Pricing</h2>
+                <div className='flex flex-col gap-10 mb-5 lp:flex-row lp:justify-between'>
+                    <SelfStudy />
+                    <LiveClasses />
+                    <PersonalTuition />
+                </div>
             </div>
 
             <ContactUs />
